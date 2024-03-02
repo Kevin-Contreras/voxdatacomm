@@ -33,8 +33,8 @@ function ResponsiveAppBar() {
 
     if(event.target.id ==="end"){
       localStorage.removeItem("user");
-      window.location.replace("/");
       localStorage.removeItem("token");
+      window.location.replace("/");
     }
   };
 
@@ -98,8 +98,9 @@ function ResponsiveAppBar() {
               }}
             >
              
-                <MenuItem key={"zona"}   color="inherit" onClick={handleCloseNavMenu}>
-                  <Typography  color="inherit"  textAlign="center">{"Cerrar sesión"}</Typography>
+                <MenuItem key={"zona"}                
+  color="inherit" onClick={handleCloseNavMenu}>
+                  <Typography  color="inherit"  id={"end"}  onClick={handleCloseNavMenu} textAlign="center">{"Cerrar sesión"}</Typography>
                 </MenuItem>
                 <Link to={"/distancia"}style={{ textDecoration: 'none', color:"black"}} >
                 <MenuItem key={"closed"}   color="black" onClick={handleCloseNavMenu}>
