@@ -68,7 +68,7 @@ export default function Zona() {
             }
    return(
     <>
-< Typography component="h2" sx={{display: 'flex',
+   { (localStorage.getItem("token")=="")?window.location.replace("/"):<>< Typography component="h2" sx={{display: 'flex',
               flexDirection: 'column',
               marginBottom: '50px',
               alignItems: 'center',}} variant="h5">
@@ -128,7 +128,8 @@ export default function Zona() {
                 }}>
               <ReactVirtualizedTable data={propiedades.propiedades} />
 
-              </div>
+              </div></>}
+
     </>
         
       

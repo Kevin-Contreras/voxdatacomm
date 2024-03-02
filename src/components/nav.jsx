@@ -43,7 +43,8 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="" sx={{margin:"0",background:"#ffff",marginBottom:"30px", boxShadow:"none",color:"black"}}  m={0}>
+    <>
+       {(window.location.pathname==="/" ?"":<AppBar position="" sx={{margin:"0",background:"#ffff",marginBottom:"30px", boxShadow:"none",color:"black"}}  m={0}>
       <Container maxWidth="xl" m={0}>
         <Toolbar disableGutters m={0}>
         <Link to={"/home"} style={{ textDecoration: 'none' }}>
@@ -189,7 +190,9 @@ function ResponsiveAppBar() {
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </AppBar>)} 
+    </>
+
   );
 }
 export default ResponsiveAppBar;

@@ -105,7 +105,7 @@ export default function Home() {
             }
    return(
     <>
-< Typography component="h2" sx={{display: 'flex',
+    {(localStorage.getItem("token")=="")?window.location.replace("/"):<>< Typography component="h2" sx={{display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',}} variant="h4">
               BIENVENIDO { localStorage.getItem("user").toLocaleUpperCase()}
@@ -157,7 +157,8 @@ export default function Home() {
                 }}>
               <ReactVirtualizedTable data={data} />
 
-              </div>
+              </div></>}
+
     </>
         
       

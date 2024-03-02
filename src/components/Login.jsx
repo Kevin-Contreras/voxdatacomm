@@ -22,6 +22,7 @@ export default function SignInSide() {
   const [password,setPassword] = React.useState("")
   const [error,setError] = React.useState("")
   const navigateTo = useNavigate();
+localStorage.setItem("token", "")
 
 let handleSubmit = async ()=>{
 if(user && password !==""){

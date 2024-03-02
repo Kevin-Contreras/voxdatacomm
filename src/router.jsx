@@ -8,13 +8,13 @@ import Zona from "./components/zona";
 export default function App() {
   return (
     <BrowserRouter>
-            {localStorage.getItem("token")!=undefined?<ResponsiveAppBar/>:""}
+            {localStorage.getItem("token")!=undefined && localStorage.getItem("token")!="" ?<ResponsiveAppBar/>:""}
 
       <Routes>
        <Route  path="/home" element={<Home />} />
 
          {/* <Route path="*" element={<NoPage />} />*/}
-         <Route  index element={<SignInSide />} />
+         <Route  path="/" element={<SignInSide />} />
          <Route  path="/register" element={<Register />} />
          <Route  path="/distancia" element={<Zona />} />
 
