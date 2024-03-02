@@ -25,7 +25,7 @@ export default function Register() {
   let handleSubmit = async ()=>{
 
   if(user && password !==""){
-    let data = await fetch("http://localhost:3000/api/register",{
+    let data = await fetch("https://api-voxdatacomm-kevin-contreras.vercel.app/api/register",{
       method:"POST",
       headers:{
         "Content-Type":"application/json"
@@ -41,7 +41,6 @@ export default function Register() {
     navigateTo('/')
 }
    setError(datas.error)
-   console.log(datas);
   }
   }
   

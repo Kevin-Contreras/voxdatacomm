@@ -33,11 +33,10 @@ export default function Home() {
     apiReportes();
     },[active])
     let apiReportes = async () => {
-        console.log(Piscina)
         try {
             const storedItem = localStorage.getItem('token');
             if(storedItem!==null){
-                let data =await fetch("http://localhost:3000/api/generar-reporte",{
+                let data =await fetch("https://api-voxdatacomm-kevin-contreras.vercel.app/api/generar-reporte",{
                     method:"POST",
                     headers:{
                         "Content-Type":"application/json",
@@ -59,7 +58,6 @@ export default function Home() {
                 })
                 let datas = await data.json();
                 setData(datas.data);
-                console.log(datas.data);
             }else{
                 window.location.replace("/")
             }
@@ -73,7 +71,7 @@ export default function Home() {
             try {
                 const storedItem = localStorage.getItem('token');
                 if(storedItem!==null){
-                    let data =await fetch("http://localhost:3000/api/generar-reporte",{
+                    let data =await fetch("https://api-voxdatacomm-kevin-contreras.vercel.app/api/generar-reporte",{
                         method:"POST",
                         headers:{
                             "Content-Type":"application/json",

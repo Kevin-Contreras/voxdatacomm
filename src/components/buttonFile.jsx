@@ -40,7 +40,7 @@ export default function InputFileUpload({setData}) {
         try {
           const base64String = await fileToBase64(file);
          let base64StringModificada = base64String.replace("data:text/csv;base64,","");
-          const fileDate = await fetch("http://localhost:3000/api/upload",{
+          const fileDate = await fetch("https://api-voxdatacomm-kevin-contreras.vercel.app/api/upload",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",

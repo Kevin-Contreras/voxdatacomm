@@ -25,7 +25,7 @@ export default function SignInSide() {
 
 let handleSubmit = async ()=>{
 if(user && password !==""){
-  let data = await fetch("http://localhost:3000/api/login",{
+  let data = await fetch("https://api-voxdatacomm-kevin-contreras.vercel.app/api/login",{
     method:"POST",
     headers:{
       "Content-Type":"application/json"

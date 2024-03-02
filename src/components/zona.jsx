@@ -37,7 +37,7 @@ export default function Zona() {
                 if(storedItem!==null){
                     const queryString = new URLSearchParams(dataGet).toString();
 
-                    let data =await fetch(`http://localhost:3000/api/precio-promedio?${queryString}`,{
+                    let data =await fetch(`https://api-voxdatacomm-kevin-contreras.vercel.app/api/precio-promedio?${queryString}`,{
                         method:"GET",
                         headers:{
                             "Content-Type":"application/json",
@@ -46,7 +46,7 @@ export default function Zona() {
                         },
                      
                     })
-                    let propiedades =await fetch(`http://localhost:3000/api/propiedades-en-area?${queryString}`,{
+                    let propiedades =await fetch(`https://api-voxdatacomm-kevin-contreras.vercel.app/api/propiedades-en-area?${queryString}`,{
                         method:"GET",
                         headers:{
                             "Content-Type":"application/json",
@@ -57,7 +57,6 @@ export default function Zona() {
                     })
                     let datas = await data.json();
                     let dataPropiedades = await propiedades.json();
-                    console.log(datas)
                     setPropiedades(dataPropiedades)
                      setData(datas);
                     
